@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(purple, white);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        button {
+            background-color: black;
+            color: grey;
+            font-size: 40px;
+            border-radius: 15px;
+            padding: 15px 30px;
+            width: 200px;
+            border: none;
+            margin: 60px;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>VAMOS JOGAR HOJE?</h1>
+    <div class="botoes">
+        <div class="botaoS">
+            <button onclick="sim()">SIM</button>
+        </div>
+        <div class="botaoN">
+            <button onclick="desvia()" id="botao" onmouseover="desvia()">NÃO</button>
+        </div>
+    </div>
+
+    <script>
+        function sim() {
+            location.href = "https://youtu.be/ZX_mvoY_Hg0?si=PS-yQBnFjC2Ntel3"
+        }
+        function desvia() {
+            let botao = document.getElementById("botao")
+            botao.style.position = "Absolute"
+            botao.style.bottom = gerarPosicao(10, 80)
+            botao.style.left = gerarPosicao(10, 80)
+        }
+        function gerarPosicao(min, max) {
+            return (Math.random()*(max-min)+min)+"%"
+        }
+    </script>
+</body>
+
+</html>
