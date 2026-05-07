@@ -1,0 +1,54 @@
+.ativo {
+    background-color: red;
+    color: white;
+}
+.destaque {
+    border-color: yellow;
+    border-style: solid;
+    background-color: aqua;
+}
+.grande {
+    font-size: 30px;
+}
+.escondido {
+    display: none;
+}
+.hover {
+    background-color: green;
+    color: white;
+}
+.botao {
+    background-color: black;
+    border-style: solid;
+    border-color: tomato;
+    color: white;
+}
+.dark {
+    background-color: #121212;
+    color: white;
+}
+.mostrar {
+    display: none;
+}
+.cores {
+    color: red;
+}
+.borda {
+    border-color: blue;
+    border-style: solid;
+}
+.azul {
+    color: blue;
+}
+.verde {
+    color: green;
+}
+.vermelho {
+    color: red;
+}
+.selecionado {
+    color: aqua;
+    background-color: azure;
+    border-style: solid;
+    border-color: black;
+}
