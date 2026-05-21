@@ -9,13 +9,13 @@ let perguntas = [
         pergunta: "De qual carro é essa traseira?",
         imagem: "img/dodge.jpg",
         respostas: ["Dodge Durango", "Dodge Challenger", "Dodge Viper", "Dodge Charger"],
-        correta: 3, //Ferrari SF90  
+        correta: 3, //Dodge Charger
     },
     {
         pergunta: "Qual o nome desse carro?",
         imagem: "img/lambo.png",
         respostas: ["Lamborghini Huracán", "Lamborghini Aventador", "Lamborghini Revuelto", "Lamborghini Temerario"],
-        correta: 1 //lamborghini Aventador
+        correta: 1 //Lamborghini Aventador
     },
     {
         pergunta: "Qual o nome desse carro?",
@@ -62,50 +62,83 @@ let perguntas = [
 ]
 
 let perguntaAtual = 0
-
 let pontuacao = 0
+const resultadoEl = document.getElementById("resultado")
+const imagemPergunta = document.getElementById("imagemPergunta")
+const imagemWrapper = document.querySelector(".imagem-pergunta")
+const startScreen = document.getElementById("startScreen")
+const container = document.getElementById("container")
+
+function iniciarQuiz() {
+    startScreen.classList.add("hidden")
+    container.classList.remove("hidden")
+    mostrarPergunta()
+}
 
 function mostrarPergunta() {
-    let pergunta = perguntas[perguntaAtual]
-    //Pega a pergunta atual dentro do array
-
-    document.getElementById("pergunta").innerHTML = pergunta.pergunta
+    const pergunta = perguntas[perguntaAtual]
+    document.getElementById("pergunta").innerText = pergunta.pergunta
 
     if (pergunta.imagem) {
-        document.getElementById("pergunta").innerHTML += `<br><img src="${pergunta.imagem}" alt="Imagem da pergunta" style="width: 680px; height: auto;">`
+        imagemPergunta.src = pergunta.imagem
+        imagemPergunta.alt = pergunta.pergunta
+        imagemWrapper.style.display = "block"
+    } else {
+        imagemPergunta.src = ""
+        imagemPergunta.alt = ""
+        imagemWrapper.style.display = "none"
     }
 
-    let respostasDiv = document.getElementById("respostas")
+    const respostasDiv = document.getElementById("respostas")
     respostasDiv.innerHTML = ""
-    //Limpa a div antes de adicionar as novas respostas
+    resultadoEl.innerText = ""
+    resultadoEl.className = "resultado"
+
     pergunta.respostas.forEach((resposta, index) => {
-        respostasDiv.innerHTML += `<button onclick="verificarResposta(${index})">${resposta}</button>`
+        const button = document.createElement("button")
+        button.type = "button"
+        button.className = "resposta-btn"
+        button.innerText = resposta
+        button.addEventListener("click", () => verificarResposta(index, button))
+        respostasDiv.appendChild(button)
     })
 }
-function verificarResposta(index) {
-    let pergunta = perguntas[perguntaAtual]
-    let resultado = document.getElementById("resultado")
-    if (index == pergunta.correta) {
-        resultado.innerText = "Acertou!"
+
+function verificarResposta(index, button) {
+    const pergunta = perguntas[perguntaAtual]
+    const respostasButtons = document.querySelectorAll("#respostas button")
+    respostasButtons.forEach((btn, idx) => {
+        btn.disabled = true
+        if (idx === pergunta.correta) {
+            btn.classList.add("correct")
+        }
+    })
+
+    if (index === pergunta.correta) {
+        resultadoEl.innerText = "Acertou!"
+        resultadoEl.classList.add("success")
+        button.classList.add("correct")
         pontuacao++
     } else {
-        resultado.innerText = "Errou!"
+        resultadoEl.innerText = "Errou!"
+        resultadoEl.classList.add("error")
+        button.classList.add("wrong")
     }
 }
+
 function proximaPergunta() {
     perguntaAtual++
-    //Vai para a próxima pergunta
     if (perguntaAtual < perguntas.length) {
         mostrarPergunta()
-        document.getElementById("resultado").innerText = ""
     } else {
         mostrarResultadoFinal()
     }
 }
+
 function mostrarResultadoFinal() {
     document.getElementById("container").innerHTML = `
-    <h2>Quiz Finalizado!</h2>
-    <p>Sua pontuação final é: ${pontuacao}<p>
-    <button onclick="location.reload()">Jogar Novamente</button>
-`}
-mostrarPergunta()   
+        <h2>Quiz Finalizado!</h2>
+        <p class="final-text">Você acertou ${pontuacao} de ${perguntas.length} perguntas.</p>
+        <button class="btn proxima" type="button" onclick="location.reload()">Jogar Novamente</button>
+    `
+}   
