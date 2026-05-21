@@ -1,0 +1,117 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+
+}
+button img {
+    width: 150px;
+    height: auto;
+}
+.conteudo input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+.conteudo {
+    background-color: white;
+    width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px auto;
+    text-align: center;
+}
+.conteudo button {
+    margin: 6px 5px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.conteudo1 input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+.conteudo1 {
+    background-color: white;
+    width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px auto;
+    text-align: center;
+}
+.conteudo1 button {
+    margin: 6px 5px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.conteudo2 img {
+    width: 600px;
+    max-width: 90vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.conteudo2 {
+    background-color: white;
+    width: 620px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px auto;
+    text-align: center;
+}
+.conteudo3 input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+.conteudo3 {
+    background-color: white;
+    width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px auto;
+    text-align: center;
+}
+.conteudo3 button {
+    margin: 6px 5px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.conteudo4 {
+    background-color: white;
+    width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px auto;
+    text-align: center;
+}
+.conteudo4 input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.conteudo4 button {
+    margin: 6px 5px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
