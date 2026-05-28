@@ -10,36 +10,12 @@ export default function TelaHome() {
 
   return (
     <View style={estilos.container}>
-      <Text style={estilos.title}>Bem-vindo,</Text>
-      <Text style={estilos.email}>{autenticacao.currentUser?.email}</Text>
-      <View style={estilos.buttonWrapper}>
-        <Button title="Sair" onPress={fazerLogout} />
-      </View>
+      <Text>Bem-vindo, {autenticacao.currentUser?.email}</Text>
+      <Button title="Sair" onPress={fazerLogout} />
     </View>
   );
 }
 
 const estilos = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#ffffff',
-  },
-  title: {
-    fontSize: 22,
-    fontWeight: '600',
-    marginBottom: 8,
-    color: '#333333',
-  },
-  email: {
-    fontSize: 16,
-    marginBottom: 24,
-    color: '#555555',
-  },
-  buttonWrapper: {
-    width: '100%',
-    maxWidth: 300,
-  },
+  container: { padding: 20 },
 });
