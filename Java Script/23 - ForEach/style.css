@@ -1,24 +1,59 @@
-.item {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    margin: 15px;
+body{
+    font-family: Arial;
+    padding: 20px;
 }
-.troca {
-    background-color: green;
-    color: red;
+
+div{
+    width: 120px;
+    height: 120px;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
-.ativo {
-    background-color: purple;
-    color: red;
+
+.corNova{
+    background-color: yellow;
+    color: blue;
 }
-.item1 {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    margin: 15px;
+
+.ativo{
+    background-color: lightgreen;
+    color: darkgreen;
+    padding: 10px;
 }
-.rosa {
+
+.rosa{
     background-color: pink;
+    color: deeppink;
+}
+
+.destacado{
+    background-color: black;
+    color: white;
+    border: 3px solid red;
+}
+
+.selecionado{
+    background-color: orange;
+    color: white;
+}
+
+.menu{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.itemMenu{
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.menuAtivo{
+    background-color: blue;
     color: white;
 }
