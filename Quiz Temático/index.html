@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Carros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-shell">
+        <header class="quiz-header">
+            <span class="quiz-label">Quiz Temático</span>
+            <h1>Quiz de Carros</h1>
+            <p>Identifique os carros pelas fotos e teste seus conhecimentos automotivos.</p>
+        </header>
+
+        <section id="startScreen" class="start-screen">
+            <div class="start-card">
+                <h2>Pronto para começar?</h2>
+                <p>Vamos testar seus conhecimentos sobre carros famosos. Clique em iniciar para começar o quiz.</p>
+                <button class="btn proxima" type="button" onclick="iniciarQuiz()">Iniciar Quiz</button>
+            </div>
+        </section>
+
+        <main id="container" class="quiz-card hidden">
+            <div class="pergunta-box">
+                <h2 id="pergunta"></h2>
+                <div class="imagem-pergunta">
+                    <img id="imagemPergunta" src="" alt="">
+                </div>
+            </div>
+
+            <div id="respostas" class="respostas"></div>
+            <p id="resultado" class="resultado"></p>
+            <button id="proxima" class="btn proxima" onclick="proximaPergunta()">Próxima Pergunta</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

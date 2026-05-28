@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>1 PopUp de Login</h1>
+    <button onclick="abrirPopUp()">Abrir Pop-up de Login</button>
+    <div class="popup" id="popup">
+        <div class="conteudo">
+            <h1>Login</h1>
+            <br>
+            <input type="text" placeholder="Usuário">
+            <br>
+            <input type="password" placeholder="Senha">
+            <br>
+            <button onclick="fecharPopUp()">Entrar </button>
+        </div>
+    </div>
+
+    <h1>--------------------------------------------------</h1>
+
+    <h1>2 PopUp de Confirmação</h1>
+    <button onclick="abrirPopUpC()">Abrir Pop-up de Confirmação</button>
+    <div class="popup" id="popupC">
+        <div class="conteudo1">
+            <h2>Tem certeza que deseja excluir este item?</h2>
+            <button onclick="fecharPopUpC()">Sim</button>
+            <button onclick="fecharPopUpC()">Não</button>
+        </div>
+    </div>
+
+    <h1>--------------------------------------------------</h1>
+
+    <h1>3 PopUp de imagem</h1>
+    <button onclick="abrirPopUpI()">
+        <img src="img/img6.avif" alt="">
+    </button>
+    <div class="popup" id="popupI">
+        <div class="conteudo2">
+            <img src="img/img6.avif" alt="Imagem">
+            <button onclick="fecharPopUpI()">Fechar</button>
+        </div>
+    </div>
+
+    <h1>--------------------------------------------------</h1>
+
+    <h1>4 PopUp de Curiosidade</h1>
+    <button onclick="abrirPopUpCR()">Abrir Pop-up de Curiosidade</button>
+    <div class="popup" id="popupCR">
+        <div class="conteudo3">
+            <h2>Curiosidade</h2>
+            <p>Os polvos têm três corações 🐙
+                Dois deles bombeiam sangue para as brânquias, enquanto o terceiro envia sangue para o resto do corpo. E
+                tem mais: o sangue deles é azul, porque usa cobre (hemocianina) em vez de ferro para transportar
+                oxigênio. Quando o polvo nada, o coração principal praticamente para de bater por isso eles preferem
+                rastejar no fundo do mar em vez de nadar por longos períodos.</p>
+            <button onclick="fecharPopUpCR()">Fechar</button>
+        </div>
+    </div>
+    
+    <h1>--------------------------------------------------</h1>
+
+    <h1>5 PopUp de Aviso</h1>
+    <button onclick="abrirPopUpA()">Abrir Pop-up de Aviso</button>
+    <div class="popup" id="popupA">
+        <div class="conteudo4">
+            <h2>Digite a senha secreta</h2>
+            <input id="senhaInput" type="password" placeholder="Senha">
+            <br>
+            <button onclick="validarSenha()">Entrar</button>
+            <button onclick="fecharPopUpA()">Fechar</button>
+        </div>
+    </div>
+    <div class="popup" id="popupSucesso">
+        <div class="conteudo4">
+            <h2>Parabéns!</h2>
+            <p>Senha correta!</p>
+            <button onclick="fecharPopUpSucesso()">Fechar</button>
+        </div>
+    </div>
+
+    <div class="popup" id="popupErro">
+        <div class="conteudo4">
+            <h2>Erro</h2>
+            <p>Senha incorreta. Tente novamente.</p>
+            <button onclick="fecharPopUpErro()">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
