@@ -22,9 +22,32 @@ const conexao = mysql.createConnection({
 
 //Testar a conexão com o banco de dados
 conexao.connect((erro) => {
-    if(erro){
+    if (erro) {
         console.log("Erro na conexão")
     } else {
         console.log("Conectado ao MySQL!")
     }
+})
+
+//Cria um POST chamada /salvar, ela vai salvar no banco
+app.post("/salvar", (req, res) => {
+    //Pega a palavra enviada pelo js(front-end)
+    //req.body = dados enviados
+    //palavra = nome da propriedade
+    const palavra = req.body.palavra;
+    //comandos do sql para inserir dados
+    const sql = "INSERT INTO palavra (texto) VALUES (?)";
+    // (?) = valor que será trocado pela palavra digitada
+
+    //Executa o comando
+    conexao.query(sql, [palavra], (erro, resultado) => {
+        if (erro) {
+            res.send("Erro no insert")
+        } else {
+            res.send("Palavra salva com sucesso!")
+        }
+    })
+})
+app.listen(3000, () => {
+    console.log("Servidor Funcionando")
 })
