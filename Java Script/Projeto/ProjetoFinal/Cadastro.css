@@ -1,0 +1,121 @@
+:root {
+    --bg: #f4f8ff;
+    --card: #ffffff;
+    --text: #0e2b56;
+    --muted: #6b88a8;
+    --accent: #1e5bb5;
+    --accent-dark: #153f7f;
+    --border: rgba(30, 91, 181, 0.12)
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text)
+}
+
+.cadastro-container {
+    max-width: 720px;
+    margin: 32px auto;
+    padding: 20px
+}
+
+.cadastro-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center
+}
+
+.cadastro-logo-circle {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 12px 32px rgba(30, 91, 181, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s
+}
+
+.logo-link:hover .cadastro-logo-circle {
+    transform: scale(1.05);
+    box-shadow: 0 16px 40px rgba(30, 91, 181, 0.2)
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-weight: 600;
+    transition: color 0.2s
+}
+
+.back:hover {
+    color: var(--accent)
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 26px;
+    box-shadow: 0 16px 40px rgba(30, 91, 181, 0.06)
+}
+
+.card h1 {
+    margin: 0 0 8px
+}
+
+.card p {
+    margin: 0 0 18px;
+    color: var(--muted)
+}
+
+.cad-form {
+    display: grid;
+    gap: 14px
+}
+
+.cad-form label {
+    display: grid;
+    gap: 8px;
+    font-weight: 600
+}
+
+.cad-form input {
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 1rem
+}
+
+.btn {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.success {
+    margin-top: 12px;
+    color: var(--accent);
+    font-weight: 700
+}
+
+@media(max-width:520px) {
+    .cadastro-container {
+        padding: 12px
+    }
+}
