@@ -1,20 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrossel de Produto e Lançamentos</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Carrossel Com Tempo</h1>
-        <div class="carrossel">
-            <img src="img/img4.avif" class="img ativa">
-            <img src="img/img5.avif" class="img">
-            <img src="img/img6.avif" class="img">
-        </div>
 
+<body>
+    <main class="container">
+        <header class="topo">
+            <h1>Carrossel de Produto e Lançamentos</h1>
+        </header>
+
+        <section class="card secao-produto">
+            <div class="secao-cabecalho">
+                <div>
+                    <h1 class="tag">Anúncio de um produto</h1>
+                </div>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="carrossel produto" data-interval="0" data-controls="true">
+                    <button class="carousel-control prev" aria-label="Anterior">‹</button>
+                    <div class="slides">
+                        <img src="img/img4.avif" class="img ativa" alt="Produto 1" data-name="AirMax TN Blue" data-price="1099,90">
+                        <img src="img/img5.avif" class="img" alt="Produto 2" data-name="AirMax TN Orange" data-price="999,90">
+                        <img src="img/img6.avif" class="img" alt="Produto 3" data-name="AirMax TN Black" data-price="1299,90">
+                    </div>
+                    <button class="carousel-control next" aria-label="Próximo">›</button>
+                </div>
+
+                <div class="produto-info">
+                    <h3>Tênis de Corrida</h3>
+                    <p class="preco">R$ 399,90</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card secao-lancamentos">
+            <div class="secao-cabecalho">
+                <div>
+                    <h1 class="tag">Últimos lançamentos</h1>
+                </div>
+            </div>
+
+            <div class="carousel-wrapper lancamentos-wrapper">
+                <div class="carrossel lancamentos" data-interval="3000" data-controls="false">
+                    <div class="slides">
+                        <img src="img/img4.avif" class="img ativa" alt="Lançamento 1">
+                        <img src="img/img5.avif" class="img" alt="Lançamento 2">
+                        <img src="img/img6.avif" class="img" alt="Lançamento 3">
+                        <img src="img/img2.avif" class="img" alt="Lançamento 4">
+                        <img src="img/img1.avif" class="img" alt="Lançamento 5">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
