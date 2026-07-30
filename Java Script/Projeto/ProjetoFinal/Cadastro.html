@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastro - Patas e Companhia</title>
+  <link rel="stylesheet" href="Cadastro.css">
+</head>
+<body>
+  <main class="cadastro-container">
+    <div class="cadastro-logo-wrapper">
+      <a href="TelaPrincipal.html" class="logo-link">
+        <img src="Imagens/logo.png" alt="Patas e Companhia - Logo" class="cadastro-logo-circle">
+      </a>
+    </div>
+    <a class="back" href="TelaPrincipal.html">← Voltar</a>
+    <section class="card">
+      <h1>Inscrição de Clientes</h1>
+      <p>Deixe seus dados para receber novidades e ofertas da inauguração.</p>
+
+      <form id="cadForm" class="cad-form" novalidate>
+        <label>
+          Nome
+          <input type="text" name="nome" id="nome" required placeholder="Seu nome completo">
+        </label>
+
+        <label>
+          Cidade
+          <input type="text" name="cidade" id="cidade" required placeholder="Sua cidade">
+        </label>
+
+        <label>
+          Celular
+          <input type="tel" name="celular" id="celular" required placeholder="(11) 90000-0000">
+        </label>
+
+        <label>
+          Quantidade de animais na casa
+          <input type="number" name="quantidade" id="quantidade" min="0" required placeholder="Número de pets">
+        </label>
+
+        <button type="submit" class="btn">Cadastrar</button>
+        <div id="successMsg" class="success" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="Cadastro.js"></script>
+</body>
+</html>
