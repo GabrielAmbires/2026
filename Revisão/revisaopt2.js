@@ -19,7 +19,7 @@ console.log("Atividade 4")
 let num1 = Number(prompt("Digite o primeiro número: "))
 let num2 = Number(prompt("Digite o segundo número: "))
 let resultado2 = num1 > num2 ? "O primeiro número é maior" : num1 < num2 ? "O segundo número é maior" : "Os números são iguais"
-console.log(resultado2)             
+console.log(resultado2)
 console.log("----------------------------")
 console.log("Atividade 5")
 let compra = Number(prompt("Digite o valor da compra: "))
@@ -105,6 +105,36 @@ do {
     console.log(contadorPar)
     contadorPar += 2
 } while (contadorPar <= 31)
+    
+//For
+console.log("Laço de Repetição - For:")
+console.log("1 For - Contador")
+for (let i = 1; i <= 30; i++) {
+    console.log(i)
+}
+
+console.log("2 For - Contador")
+for (let i = 30; i >= 1; i--) {
+    console.log(i)
+}
+
+console.log("3 For - Contagem Personalizada")
+let inicio = Number(prompt("Digite o número inicial:"))
+let fim = Number(prompt("Digite o número final:"))
+console.log("Contagem:")
+for (let i = inicio; i <= fim; i++) {
+    console.log(i)
+}
+
+console.log("4 For - Sequência")
+for (let i = 50; i >= 30; i--) {
+    console.log(i)
+}
+
+console.log("5 For - Números Alternados")
+for (let i = 1; i <= 50; i += 2) {
+    console.log(i)
+}
 
 //Array
 console.log("Array:")
@@ -137,32 +167,3 @@ for (let i = 0; i < cidades.length; i++) {
     console.log(cidades[i])
 }
 
-//For
-console.log("Laço de Repetição - For:")
-console.log("1 For - Contador")
-for (let i = 1; i <= 30; i++) {
-    console.log(i)
-}
-
-console.log("2 For - Contador")
-for (let i = 30; i >= 1; i--) {
-    console.log(i)
-}
-
-console.log("3 For - Contagem Personalizada")
-let inicio = Number(prompt("Digite o número inicial:"))
-let fim = Number(prompt("Digite o número final:"))
-console.log("Contagem:")
-for (let i = inicio; i <= fim; i++) {
-    console.log(i)
-}
-
-console.log("4 For - Sequência")
-for (let i = 50; i >= 30; i--) {
-    console.log(i)
-}
-
-console.log("5 For - Números Alternados")
-for (let i = 1; i <= 50; i += 2) {
-    console.log(i)
-}
