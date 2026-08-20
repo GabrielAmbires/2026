@@ -66,23 +66,18 @@ console.log("Maior numero: " + maiorNumero(12, 9))
 console.log("Numero: " + verificarNumero(-3))
 
 // DOM - Manipulacao
-let textoTroca = document.getElementById("textoPrincipal")
-let divCorAzul = document.getElementById("divPersonalizada")
-let textoPersonalizado = document.getElementById("textoEstilo")
-let tituloPersonalizado = document.getElementById("tituloEstilo")
-let divEscondida = document.getElementById("elementoEscondido")
-let textoTrocaAlternada = document.getElementById("textoAlternavel")
-let imagemArredondada = document.getElementById("imagem")
-let botaoEstilizado = document.getElementById("botaoPersonalizado")
 
+let textoTroca = document.getElementById("textoPrincipal")
 document.getElementById("botaoTexto").addEventListener("click", function() {
 	textoTroca.innerText = "Texto alterado com JS!"
 })
 
+let divCorAzul = document.getElementById("divPersonalizada")
 document.getElementById("botaoDiv").addEventListener("click", function() {
 	divCorAzul.style.backgroundColor = "blue"
 })
 
+let textoPersonalizado = document.getElementById("textoEstilo")
 document.getElementById("botaoEstilo").addEventListener("click", function() {
 	textoPersonalizado.style.color = "blue"
 	textoPersonalizado.style.fontSize = "20px"
@@ -90,6 +85,7 @@ document.getElementById("botaoEstilo").addEventListener("click", function() {
 	tituloPersonalizado.style.fontSize = "35px"
 })
 
+let divEscondida = document.getElementById("elementoEscondido")
 document.getElementById("botaoEsconder").addEventListener("click", function() {
 	if (divEscondida.style.display === "none") {
 		divEscondida.style.display = "block"
@@ -98,6 +94,7 @@ document.getElementById("botaoEsconder").addEventListener("click", function() {
 	}
 })
 
+let textoTrocaAlternada = document.getElementById("textoAlternavel")
 let textoOriginalAlternavel = textoTrocaAlternada.innerText
 document.getElementById("botaoAlternarTexto").addEventListener("click", function() {
 	if (textoTrocaAlternada.innerText === textoOriginalAlternavel) {
@@ -107,10 +104,12 @@ document.getElementById("botaoAlternarTexto").addEventListener("click", function
 	}
 })
 
+let imagemArredondada = document.getElementById("imagem")
 document.getElementById("botaoImagem").addEventListener("click", function() {
 	imagemArredondada.style.borderRadius = "50%"
 })
 
+let botaoEstilizado = document.getElementById("botaoPersonalizado")
 document.getElementById("botaoPersonalizado").addEventListener("click", function() {
 	botaoEstilizado.style.backgroundColor = "#222"
 	botaoEstilizado.style.color = "white"
