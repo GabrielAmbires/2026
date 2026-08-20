@@ -87,6 +87,6 @@ img2.addEventListener("click", function () {
 let mensagem1 = document.getElementById("mensagem1")
 let input1 = document.getElementById("input1")
 
-input.addEventListener("input", function () {
-    mensagem1.l
+input.addEventListener("input1", function () {
+    mensagem1.innerText = input1.value.length
 })
