@@ -1,0 +1,10 @@
+.quadrado1 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(247, 244, 244);
+}
+.destaque {
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
+}
