@@ -1,10 +1,10 @@
 // Funcoes anonimas
 
 // 1 - Mensagem
-let mensagem = function() {
+let mensagemAnonima = function() {
 	return "Ola! Esta mensagem veio de uma funcao anonima."
 }
-console.log(mensagem())
+console.log(mensagemAnonima())
 
 // 2 - Dobro
 let dobro = function(numero) {
@@ -16,8 +16,8 @@ console.log("Dobro: " + dobro(8))
 let calcularMedia = function(nota1, nota2, nota3) {
 	return (nota1 + nota2 + nota3) / 3
 }
-let media = calcularMedia(8, 7, 9)
-console.log("Media: " + media)
+let mediaCalculada = calcularMedia(8, 7, 9)
+console.log("Media: " + mediaCalculada)
 
 // 4 - Situacao
 let verificarSituacao = function(media) {
@@ -26,7 +26,7 @@ let verificarSituacao = function(media) {
 	}
 	return "Reprovado"
 }
-console.log("Situacao: " + verificarSituacao(media))
+console.log("Situacao: " + verificarSituacao(mediaCalculada))
 
 // 5 - Calculadora
 let somar = function(numero1, numero2) {
@@ -47,7 +47,7 @@ console.log("Multiplicacao: " + multiplicar(10, 2))
 console.log("Divisao: " + dividir(10, 2))
 
 // Arrow functions
-let multiplicacao = (numero1, numero2) => numero1 * numero2
+let multiplicacaoArrow = (numero1, numero2) => numero1 * numero2
 let triplo = numero => numero * 3
 let parOuImpar = numero => numero % 2 === 0 ? "Par" : "Impar"
 let maiorNumero = (numero1, numero2) => numero1 > numero2 ? numero1 : numero2
@@ -59,61 +59,61 @@ let verificarNumero = numero => {
 	}
 	return "Zero"
 }
-console.log("Multiplicacao com arrow function: " + multiplicacao(4, 5))
+console.log("Multiplicacao com arrow function: " + multiplicacaoArrow(4, 5))
 console.log("Triplo: " + triplo(5))
 console.log("Par ou impar: " + parOuImpar(7))
 console.log("Maior numero: " + maiorNumero(12, 9))
 console.log("Numero: " + verificarNumero(-3))
 
 // DOM - Manipulacao
-let textoPrincipal = document.getElementById("textoPrincipal")
-let divPersonalizada = document.getElementById("divPersonalizada")
-let textoEstilo = document.getElementById("textoEstilo")
-let tituloEstilo = document.getElementById("tituloEstilo")
-let elementoEscondido = document.getElementById("elementoEscondido")
-let textoAlternavel = document.getElementById("textoAlternavel")
-let imagem = document.getElementById("imagem")
-let botaoPersonalizado = document.getElementById("botaoPersonalizado")
+let textoTroca = document.getElementById("textoPrincipal")
+let divCorAzul = document.getElementById("divPersonalizada")
+let textoPersonalizado = document.getElementById("textoEstilo")
+let tituloPersonalizado = document.getElementById("tituloEstilo")
+let divEscondida = document.getElementById("elementoEscondido")
+let textoTrocaAlternada = document.getElementById("textoAlternavel")
+let imagemArredondada = document.getElementById("imagem")
+let botaoEstilizado = document.getElementById("botaoPersonalizado")
 
 document.getElementById("botaoTexto").addEventListener("click", function() {
-	textoPrincipal.innerText = "Texto alterado com JS!"
+	textoTroca.innerText = "Texto alterado com JS!"
 })
 
 document.getElementById("botaoDiv").addEventListener("click", function() {
-	divPersonalizada.style.backgroundColor = "blue"
+	divCorAzul.style.backgroundColor = "blue"
 })
 
 document.getElementById("botaoEstilo").addEventListener("click", function() {
-	textoEstilo.style.color = "blue"
-	textoEstilo.style.fontSize = "20px"
-	tituloEstilo.style.color = "green"
-	tituloEstilo.style.fontSize = "35px"
+	textoPersonalizado.style.color = "blue"
+	textoPersonalizado.style.fontSize = "20px"
+	tituloPersonalizado.style.color = "green"
+	tituloPersonalizado.style.fontSize = "35px"
 })
 
 document.getElementById("botaoEsconder").addEventListener("click", function() {
-	if (elementoEscondido.style.display === "none") {
-		elementoEscondido.style.display = "block"
+	if (divEscondida.style.display === "none") {
+		divEscondida.style.display = "block"
 	} else {
-		elementoEscondido.style.display = "none"
+		divEscondida.style.display = "none"
 	}
 })
 
-let textoOriginal = textoAlternavel.innerText
+let textoOriginalAlternavel = textoTrocaAlternada.innerText
 document.getElementById("botaoAlternarTexto").addEventListener("click", function() {
-	if (textoAlternavel.innerText === textoOriginal) {
-		textoAlternavel.innerText = "Este e o novo texto."
+	if (textoTrocaAlternada.innerText === textoOriginalAlternavel) {
+		textoTrocaAlternada.innerText = "Este e o novo texto."
 	} else {
-		textoAlternavel.innerText = textoOriginal
+		textoTrocaAlternada.innerText = textoOriginalAlternavel
 	}
 })
 
 document.getElementById("botaoImagem").addEventListener("click", function() {
-	imagem.style.borderRadius = "50%"
+	imagemArredondada.style.borderRadius = "50%"
 })
 
 document.getElementById("botaoPersonalizado").addEventListener("click", function() {
-	botaoPersonalizado.style.backgroundColor = "#222"
-	botaoPersonalizado.style.color = "white"
-	botaoPersonalizado.style.border = "3px solid #00a86b"
-	botaoPersonalizado.style.borderRadius = "12px"
+	botaoEstilizado.style.backgroundColor = "#222"
+	botaoEstilizado.style.color = "white"
+	botaoEstilizado.style.border = "3px solid #00a86b"
+	botaoEstilizado.style.borderRadius = "12px"
 })
