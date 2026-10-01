@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e6002e">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="pokedex" aria-label="Pokédex">
+        <header class="device-top">
+            <div class="camera-lens" aria-hidden="true"><span></span></div>
+            <div class="indicator-lights" aria-hidden="true">
+                <span class="light light-red"></span>
+                <span class="light light-yellow"></span>
+                <span class="light light-green"></span>
+            </div>
+            <span class="device-label">POKÉDEX <b>01</b></span>
+        </header>
+
+        <div class="device-book">
+            <section class="left-panel" aria-label="Busca de Pokémon">
+                <div class="screen-bezel">
+                    <div class="screen-lights" aria-hidden="true"><i></i><i></i></div>
+                    <div class="main-screen" id="resultado" aria-live="polite">
+                        <p class="screen-prompt">SISTEMA DE IDENTIFICAÇÃO</p>
+                        <p class="screen-empty">Aguardando<br>Pokémon...</p>
+                    </div>
+                    <div class="speaker-grille" aria-hidden="true"><i></i><i></i><i></i></div>
+                </div>
+
+                <form class="search-controls" id="formBusca">
+                    <label class="visually-hidden" for="input">Nome do Pokémon</label>
+                    <input type="search" id="input" placeholder="Nome do Pokémon" autocomplete="off" required>
+                    <button id="botao" type="submit" aria-label="Buscar Pokémon">
+                        <span aria-hidden="true">⌕</span>
+                    </button>
+                </form>
+                <div class="control-decor" aria-hidden="true">
+                    <span class="round-control"></span>
+                    <span class="small-slot"></span>
+                    <span class="dpad"><i></i><b></b></span>
+                    <span class="green-control"></span>
+                </div>
+            </section>
+
+            <div class="hinge" aria-hidden="true"><span></span></div>
+
+            <section class="right-panel" aria-label="Painel de registro">
+                <div class="index-screen">
+                    <span class="index-label">REGISTRO</span>
+                    <strong id="numeroPokemon">#---</strong>
+                    <span class="index-caption" id="statusBusca">POKÉDEX NACIONAL</span>
+                </div>
+                <div class="blue-keypad" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i>
+                </div>
+                <div class="right-controls" aria-hidden="true">
+                    <span></span><span></span>
+                </div>
+                <div class="data-slots" aria-hidden="true"><i></i><i></i></div>
+                <span class="power-button" aria-hidden="true"></span>
+                <span class="bottom-slot" aria-hidden="true"></span>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
