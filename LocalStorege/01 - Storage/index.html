@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Presentes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="imagem"></div>
+
+    <h1>Lista de Presentes</h1>
+    <p>Organize os presentes que deseja cadastrar!</p>
+
+    <div class="formulario">
+      <input
+        type="text"
+        id="presente"
+        placeholder="Digite o nome do presente"
+      >
+      <button id="adicionar">Adicionar</button>
+    </div>
+
+    <div class="contador">
+      Presentes cadastrados:
+      <span id="quantidade">0</span>
+    </div>
+
+    <ul id="lista"></ul>
+
+    <p class="rodape">Seus presentes ficam salvos automaticamente.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
