@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Senhas</title>
+</head>
+<body>
+    <main class="password-app">
+        <header class="app-header">
+            <span class="eyebrow">Segurança pessoal</span>
+            <h1>Crie uma senha forte.</h1>
+            <p>Escolha o tamanho e os tipos de caracteres.</p>
+        </header>
+
+        <section class="password-card" aria-label="Gerador de senhas">
+            <div class="password-display">
+                <output id="resultado" aria-live="polite">Sua senha aparecerá aqui</output>
+                <button id="copiar" class="copy-button" type="button" aria-label="Copiar senha" disabled>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="8" y="8" width="11" height="11" rx="2"></rect>
+                        <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+                    </svg>
+                    <span>Copiar</span>
+                </button>
+            </div>
+
+            <div class="settings">
+                <div class="length-row">
+                    <div>
+                        <label for="tamanho">Comprimento</label>
+                        <span>Entre 4 e 32 caracteres</span>
+                    </div>
+                    <input type="number" id="tamanho" value="16" min="4" max="32">
+                </div>
+
+                <fieldset>
+                    <legend>Caracteres inclusos</legend>
+                    <label class="option">
+                        <input type="checkbox" id="maiusculas" checked>
+                        <span>Maiúsculas <small>A–Z</small></span>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" id="minusculas" checked>
+                        <span>Minúsculas <small>a–z</small></span>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" id="numeros" checked>
+                        <span>Números <small>0–9</small></span>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" id="simbolos" checked>
+                        <span>Símbolos <small>!@#$%</small></span>
+                    </label>
+                </fieldset>
+            </div>
+
+            <button id="gerar" class="generate-button" type="button">Gerar nova senha</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
